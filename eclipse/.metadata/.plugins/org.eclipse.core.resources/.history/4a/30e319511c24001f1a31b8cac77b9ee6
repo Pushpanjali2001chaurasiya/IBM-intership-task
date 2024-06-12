@@ -1,0 +1,49 @@
+package adit;
+
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.*;
+public class adit {
+
+	public static void main(String[] args) throws SQLException, ClassNotFoundException {
+		//Drive register
+	DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
+	Class.forName("com.mysql.cj.jdbc.Driver");
+	//System.out.println("connected databases");
+	
+	
+	 //-----------------show databases--------------//
+	
+	// Connection conn =DriverManager.getConnection("jdbc:mysql://localhost","root","");
+    // System.out.println("Connected Established: " + conn);
+// 
+//     Statement st = conn.createStatement();
+//	 ResultSet rs = st.executeQuery("show databases");
+//    System.out.println("Databases are: " + rs);
+//    while(rs.next()) {
+//	 System.out.println(rs.getString(1));
+// }
+    
+    
+  //---------------create new database--------------//
+//    Connection conn =DriverManager.getConnection("jdbc:mysql://localhost","root","");
+//	System.out.println("successfuly connected" + conn);
+//	Statement st = conn.createStatement();
+//	st.executeUpdate("Create database shubh");
+//
+//	System.out.println("Database created");
+	
+	//------------------create table------------------//
+	
+	
+	Connection conn =DriverManager.getConnection("jdbc:mysql://localhost/aditttt","root","");
+	String sql ="create table nsti(id int,name varchar(30),address varchar(50),mail varchar(45)primary key)";
+	Statement st = conn.createStatement();
+	st.executeUpdate(sql);
+	System.out.println("Table created");
+	 
+	 }
+	
+	}
+
+

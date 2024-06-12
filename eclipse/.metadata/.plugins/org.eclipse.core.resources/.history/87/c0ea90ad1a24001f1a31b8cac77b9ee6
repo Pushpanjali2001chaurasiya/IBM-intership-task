@@ -1,0 +1,28 @@
+package adit;
+
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.*;
+public class adit {
+
+	public static void main(String[] args) throws SQLException, ClassNotFoundException {
+		//Drive register
+	DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
+	Class.forName("com.mysql.cj.jdbc.Driver");
+	System.out.println("connected databases");
+	
+	 //-----------------show databases--------------//
+	 Connection conn =DriverManager.getConnection("jdbc:mysql://localhost","root","");
+     System.out.println("Connected Established: " + conn);
+ 
+     Statement st = conn.createStatement();
+	 ResultSet rs = st.executeQuery("show databases");
+    System.out.println("Databases are: " + rs);
+    while(rs.next()) {
+	 System.out.println(rs.getString(1));
+ }
+	 }
+	
+	}
+
+}
