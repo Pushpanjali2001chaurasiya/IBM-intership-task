@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form with Validation</title>
+</head>
+<body>
+    <form>
+        <!-- Text Input -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Name" minlength="3" maxlength="20" autofocus required><br><br>
+
+        <!-- File Input -->
+        <label for="profilePic">Profile Pic:</label>
+        <input type="file" id="profilePic" name="profilePic" accept=".jpg" required><br><br>
+
+        <!-- Email Input -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="test@gmail.com" required><br><br>
+
+        <!-- Number Input -->
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="18" max="100" step="4" required><br><br>
+
+        <!-- Pattern Matching Input -->
+        <label for="pinCode">PIN Code:</label>
+        <input type="text" id="pinCode" name="pinCode" pattern="\d{6}" title="Please Enter 6 Digit Pin Code" required><br><br>
+
+        <!-- Read-only Text Input -->
+        <label for="nstiName">NSTI NAME:</label>
+        <input type="text" id="nstiName" name="nstiName" value="NSTI Bengaluru" readonly><br><br>
+
+        <!-- Dropdown Select -->
+        <label for="state">State:</label>
+        <select id="state" name="state" required>
+            <option value="Odisha" selected>Odisha</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Jharkhand">Jharkhand</option>
+        </select><br><br>
+
+        <!-- Textarea -->
+        <label for="feedback">Feedback:</label>
+        <textarea id="feedback" name="feedback" minlength="20" maxlength="30" required></textarea><br><br>
+
+        <!-- Buttons -->
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+</body>
+</html>
