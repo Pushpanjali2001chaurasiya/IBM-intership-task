@@ -38,7 +38,7 @@ LinkedList.addLast("Pineapple");
 System.out.println("Update linkdedlist:-"+LinkedList);
 
 //********************show first deleted element in list****************************
-
+-
 
 String polledElement=LinkedList.pollFirst();//polled element means deleted elements
 System.out.println("Polled Elements:-"+ polledElement);
